@@ -1,0 +1,464 @@
+/************ VARIABLES **************/
+
+/* COLORS .......*/
+
+$bg-gray: #ececec;
+$border-bottom: #ececec;
+
+/* Animacio*/
+
+
+@keyframes miAnimacion{
+
+  0%{
+    opacity:1;
+  }
+
+  20%{
+    opacity:1;
+  }
+
+  30%{
+    opacity:0;
+  }
+
+  90%{
+    opacity:0;
+  }
+
+  100%{
+    opacity:1;
+  }
+
+}
+
+.animacio{
+  width: 100%;
+  height:50vh;
+  position: relative;
+  & div {
+    position:absolute;
+    //top: 0;
+    //left: 0;
+    width:100%;
+    height:50vh;
+    background-repeat: no-repeat;
+    background-size:cover;
+    &:nth-child(1) {
+      background-image: url(../images/background4.jpg);
+      animation: miAnimacion 24s linear 18s infinite;
+    }
+    &:nth-child(2) {
+      background-image: url(../images/background2.jpg);
+      animation: miAnimacion 24s linear 12s infinite;
+    }
+    &:nth-child(3) {
+      background-image: url(../images/background3.jpg);
+      animation: miAnimacion 24s linear 6s infinite;
+    }
+    &:nth-child(4) {
+      background-image: url(../images/background.jpg);
+      animation: miAnimacion 24s linear 0s infinite;
+    }
+  }
+
+
+}
+
+.row {
+  background-color: $bg-gray;
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+  //margin: 0rem auto;
+
+}
+
+.info-box {
+  background-color: #EEE;
+  flex: 1 0 25rem;
+  margin-top: 1em;
+  //margin: 1em;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+header > span,
+.text-container {
+  background-color: #fff;
+  padding: .8em;
+  border: 1px solid #DDD;
+}
+
+.info-box,
+header > span,
+.text-container {
+  border-radius: .5em;
+}
+
+.info-box header {
+  display: flex;
+}
+
+.title {
+  flex-grow: 1;
+  margin-left: .5em;
+}
+
+.title span,
+.icon {
+  color: #EC0000;
+}
+
+.title span {
+  margin-left: .5em;
+}
+
+.text-container {
+  margin-top: 1em;
+  flex-grow: 1;
+  font-size: .9em;
+  position: relative;
+  & p {
+    margin-left: 0.5rem;
+  }
+
+}
+
+.triangulo_lateral, .triangulo_fijo, .esquina_pagina, .sombra_fija, .sombra_difuminada, .sombra_radial, .sombra_externa, .sombra_interna, .iluminacion, .resalte_borde, .borde_interno, .expansion_de_borde, .recogida_de_borde, .redondeo_esquinas, .menus {
+  background: #d7d5d7;
+  display: flex;
+  align-items: center;
+  transform: translateX(0);
+  transition: all 0.4s ease;
+}
+
+.triangulo_lateral {
+
+  &::before {
+    content: '';
+    border-style: solid;
+
+    //background: aqua;
+    //border-width: 3rem 3rem 3rem 3rem;
+    //border-color: green blue grey yellow;
+    border-width: 3rem 3rem 3rem 0rem;
+    border-color: transparent transparent transparent transparent;
+    transition: all 0.4s ease;
+  }
+
+  &:hover:before {
+    border-color: transparent #d7d5d7 transparent transparent;
+    transform: translateX(-2rem);
+  }
+
+}
+
+.triangulo_fijo {
+
+  &::before {
+    content: '';
+    border-style: solid;
+    transition: all 0.5s ease;
+    border-width: 0rem 3rem 3rem 3rem;
+    border-color: transparent transparent transparent transparent;
+    position: absolute;
+    top: 0rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.4s ease;
+
+  }
+
+  &:hover {
+    transform: translateY(1.5rem);
+
+  }
+
+  &:hover:before {
+    border-color: transparent transparent #d7d5d7 transparent;
+    top: -1.5rem;
+  }
+
+}
+
+.esquina_pagina {
+  &::before {
+    content: '';
+    transition: all 0.4s ease;
+    background: linear-gradient(45deg, white 45%, #aaa 50%, #ccc 60%, white);
+
+    width: 0rem;
+    height: 0rem;
+
+    position: absolute;
+    left: 0rem;
+    bottom: 0rem;
+    transition: all 0.4s ease;
+  }
+  &:hover::before {
+    width: 2rem;
+    height: 2rem;
+  }
+
+}
+
+.sombra_fija {
+
+  &::before {
+    content: '';
+    transition: all 0.4s ease;
+    position: absolute;
+    width: 90%;
+    height: 1rem;
+    left: 5%;
+    top: 100%;
+    background: radial-gradient(ellipse ,
+            rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 80%);
+
+
+
+
+
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+  &:hover {
+    transform: translateY(-0.3rem);
+  }
+  &:hover::before {
+    transform: translateY(0.3rem);
+    opacity: 1;
+  }
+
+}
+
+.sombra_difuminada {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
+  transition: all 0.4s ease;
+
+  &:hover {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 1);
+  }
+
+}
+
+.sombra_radial {
+  box-shadow: 0px 0px 0px black;
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.5rem;
+    left: 0rem;
+    opacity: 0;
+    transition: all 0.4s ease;
+
+  }
+  &:before {
+    bottom: 100%;
+    background: radial-gradient(
+                    ellipse at 50% 150%,
+                    rgba(0, 0, 0, 0.6) 0%,
+                    rgba(0, 0, 0, 0) 80%);
+  }
+  &:after {
+    top: 100%;
+    background: radial-gradient(
+                    ellipse at 50%  -150%,
+                    rgba(0, 0, 0, 0.6) 0%,
+                    rgba(0, 0, 0, 0) 80%);
+  }
+
+  &:hover::before, &:hover::after {
+    opacity: 1;
+  }
+
+}
+
+.sombra_externa {
+  box-shadow: 0px 0px 1px black;
+  transition: all 0.4s ease;
+
+  &:hover {
+    box-shadow: 2px 3px 3px black;
+  }
+
+}
+
+.sombra_interna {
+  transition: all 0.4s ease;
+  &:hover {
+    box-shadow: 2px 2px 4px black inset,
+    -2px -2px 4px black inset;
+  }
+
+}
+
+.iluminacion {
+  border: 2px solid gray;
+  transition: all 0.4s ease;
+  &:hover {
+    background: white;
+    // background: none no es tan efectivo
+    background: none;
+
+  }
+
+}
+
+.resalte_borde {
+  transition: all 0.4s ease;
+  // si tengo un fondo oscuro
+  //box-shadow: 0 0 0 4px #555 inset;
+
+  // si tengo un fondo claro
+  box-shadow: 0 0 0 4px #ddd inset;
+
+  &:hover {
+    // si tengo un fondo oscuro
+    //box-shadow: 0 0 0 4px #ddd inset;
+
+    // si tengo un fondo claro
+    box-shadow: 0 0 0 4px #555 inset;
+
+  }
+}
+
+.borde_interno {
+
+  &::before {
+    content: '';
+    transition: all 0.4s ease;
+    position: absolute;
+    top: 0.2rem;
+    bottom: 0.2rem;
+    left: 0.2rem;
+    right: 0.2rem;
+    border: 0.2rem solid white;
+    opacity: 0;
+
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+.expansion_de_borde {
+
+  &::before {
+    content: '';
+    transition: all 0.4s ease;
+    position: absolute;
+    top: 0rem;
+    bottom: 0rem;
+    left: 0rem;
+    right: 0rem;
+    border: 0.1rem solid white;
+
+  }
+  &:hover::before {
+    top: -0.6rem;
+    bottom: -0.6rem;
+    left: -0.56em;
+    right: -0.6rem;
+    // lo de cambiar el borde lo hago yo
+    border: 0.4rem solid white;
+  }
+}
+
+.recogida_de_borde {
+
+  &::before {
+    content: '';
+    transition: all 0.4s ease;
+    position: absolute;
+    top: -1rem;
+    bottom: -1rem;
+    left: -1rem;
+    right: -1rem;
+    border: 0.2rem solid white;
+    opacity: 0;
+
+  }
+  &:hover::before {
+    top: -0.6rem;
+    bottom: -0.6rem;
+    left: -0.56em;
+    right: -0.6rem;
+    opacity: 1;
+  }
+}
+
+.redondeo_esquinas {
+
+  &:hover {
+    transition: all 0.4s ease;
+    border-radius: 1.3rem;
+  }
+
+}
+
+.menus {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-around;
+  //text-align: center;
+
+  & p {
+    flex-basis: 100%;
+  }
+  & span {
+    display: block;
+    transition: all 0.4s ease;
+    margin-top: 0.6rem;
+    border: 0.1rem solid $border-bottom;
+    padding: 0.2rem;
+    border-radius: 1.3rem;
+
+    &:nth-of-type(1):hover {
+      border-bottom: 0.3rem solid orange;
+    }
+    &:nth-of-type(2):hover {
+      border-bottom: 0.3rem solid $border-bottom;
+    }
+    &:nth-of-type(3):hover {
+      border-bottom: 0.3rem solid aqua;
+    }
+  }
+
+}
+
+
+
+
+
+/* Efectos */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

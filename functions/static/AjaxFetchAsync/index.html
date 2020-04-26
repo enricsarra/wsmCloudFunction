@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async / Await</title>
+    <base href="http://localhost:5001/wsmcloudfunction/us-central1/wsmCloudFunction/">
+    <link rel='stylesheet prefetch' href='static/AjaxFetchAsync/css/myNormalice.css'>
+    <link rel="stylesheet" href="static/AjaxFetchAsync/css/style.css">
+    <style>
+        .card {
+            /* margin: 2% auto; */
+            padding: 1%;
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <wraper>
+        <main>
+            <nav id="menu">
+                <label for="tm" id="toggle-menu">Navegació <span class="drop-icon">▾</span></label>
+                <input type="checkbox" id="tm">
+                <ul class="main-menu clearfix">
+                    <li><a href="static/index/index.html">Retornar</a></li>
+                    <!-- <li><a href="#">2-level DD 
+                      <span class="drop-icon">▾</span>
+                      <label title="Toggle Drop-down" class="drop-icon" for="sm1">▾</label>
+                    </a>
+                        <input type="checkbox" id="sm1">
+                        <ul class="sub-menu">
+                            <li><a href="#">Item 2.1</a></li>
+                            <li><a href="#">Item 2.2
+                          <span class="drop-icon">▾</span>
+                          <label title="Toggle Drop-down" class="drop-icon" for="sm2">▾</label>
+                        </a>
+                                <input type="checkbox" id="sm2">
+                                <ul class="sub-menu">
+                                    <li><a href="#">Item 2.2.1</a></li>
+                                    <li><a href="#">Item 2.2.2</a></li>
+                                    <li><a href="#">Item 2.2.3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Item 3.4</a></li>
+                        </ul>
+                    </li> -->
+                    <li><a id="inici" href="#">Inici</a></li>
+                </ul>
+            </nav>
+            <section class="disciplines">
+                <h1> TV Series</h1>
+                <h2>El servidor ens mostra aquesta pantalla.</h2>
+                <h3>Peticions amb callbacks, promeses i async-await</h3>
+                <h3>El client accedeix a les series.</h3>
+            </section>
+            <section class="disciplines wrapper-section">
+
+                <div class="disciplines__container">
+                    <div class="discipline batman circle cursor">
+                        <a id="btn1" class="discipline__name" type="button">Batman </a>
+                    </div>
+                    <div class="discipline superman circle cursor">
+                        <a id="btn2" class="discipline__name" type="button">Superman</a>
+                    </div>
+                    <div class="discipline girls circle cursor">
+                        <a id="btn3" class="discipline__name" type="button"> Girls</a>
+                    </div>
+
+                </div>
+            </section>
+
+
+
+            <div class="dinamic">
+                <h2 id="subtitul"></h2>
+                <h3> Aquí es veurá el resultat </h3>
+                <div id="resultats"> </div>
+            </div>
+
+
+        </main>
+
+        <footer>
+            <ul>
+                <li><a href="https://enricsarra.blogspot.com/" target="_blank" class="link-animated">enricBlogger</a></li>
+                <li><a href="https://codepen.io/enricsarra/pen/LLPqmR" target="_blank" class="link-animated">Cuadrats </a></li>
+                <li><a href="https://w3bits.com/css-responsive-nav-menu/" target="_blank" class="link-animated">Menú</a></li>
+            </ul>
+        </footer>
+
+
+    </wraper>
+
+
+    <!-- <script type="module" src="MyFrameworkClient.js"></script> -->
+    <script src="static/MyFrameworkClient.js"></script>
+    <!-- <script src="index.js" type="module"></script> -->
+    <script src="static/AjaxFetchAsync/index.js"></script>
+
+
+</body>
+
+</html>

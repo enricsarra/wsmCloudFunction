@@ -1,0 +1,371 @@
+/************ STYLES ****************/
+
+/* GENERAL */
+
+body{
+	color: $text-light;
+}
+
+.btn{
+	background-color: $app-red;
+	display: inline-block;
+	color: white;
+	height: $btn-height;
+	line-height: $btn-height;
+	padding: 0 1em;
+	border-radius: .3em;
+	text-transform: uppercase;
+	font-size: .8em;
+	letter-spacing: .1em;
+}
+.wrapper{
+	@include wrapper();
+}
+
+.red-link{
+	color: $app-red;
+	&:hover{
+		color: $text-dark;
+	}
+}
+
+
+/* HTML ELEMENTS */
+
+//HEADER
+#main-header{
+	height: $header-height;
+	position: fixed;
+	top: 0;
+	background-color: white;
+	width: 100%;
+	z-index: 1;
+
+	.logo{
+		background-color: $app-red;
+		height: 100%;
+		display: inline-block;
+		vertical-align: middle;
+		font-family: $serif;
+		color: white;
+		line-height: $header-height;
+		font-size: 1.2em;
+		padding: 0 1em;
+	}
+	nav{
+		background-color: white;
+		text-transform: uppercase;
+		box-shadow: 0 2px 4px rgba(0,0,0,.2);
+
+
+		height: auto;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height .4s ease;
+
+		&.displayed{
+			max-height: rem(550);
+		}
+
+
+		a{
+			display: block;
+			padding: 1em;
+		}
+	}
+	.sub-menu{
+		a{
+			padding-left: 3em;
+		}
+	}
+}
+#menu-handler{
+	color: $text-dark;
+	cursor: pointer;
+	font-size: 2em;
+	padding: 0 .5em;
+	height: 100%;
+	line-height: $header-height;
+	float: right;
+}
+
+//FOOTER
+
+#main-footer{
+	text-align: center;
+	font-size: .9em;
+	line-height: 1.2;
+	padding: 4em 0;
+}
+
+
+/************ SECTIONS **************/
+
+.title, .section-title{
+	font-family: $serif;
+	color: $text-dark;
+}
+
+.section-title{
+	font-size: 2.1em;
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+
+/* COVER */
+#cover{
+	padding-top: $header-height;
+	text-align: center;
+	@include wrapper();
+	margin-top: 4em;
+	margin-bottom: 6em;
+}
+
+	.claim{
+		font-size: 2.8em;
+		margin-bottom: 1em;
+	}
+
+/* PORTFOLIO */
+#portfolio{
+	background-color: $bg-gray;
+	padding: 2rem 0;
+}
+.project{
+	background-color: white;
+	.description-container{
+		@include wrapper();
+		padding: 1.5em 0 3em;
+	}
+	.title{
+		font-size: 1.6em;
+		margin-bottom: .8em;
+	}
+	.description{
+		line-height: 1.6;
+	}
+
+	.btn{
+		margin-top: 1.5em;
+	}
+}
+
+/* ABOUT */
+#about{
+	padding: 5em 0 2em;
+
+	.name{
+		color: $text-dark;
+		margin: 1.5em 0;
+		padding-bottom: .8em;
+		position: relative;
+
+		&::after{
+			content: '';
+			width: 2em;
+			height: 2px;
+			background-color: $app-red;
+			display: block;
+			position: absolute;
+			bottom: 0;
+		}
+	}
+	.description{
+		font-size: .95em;
+		line-height: 1.4;
+	}
+	.social{
+		margin-left: -.8em;
+		padding: 1em 0;
+		a{
+			display: inline-block;
+			padding: 1em .8em;
+			color: $icon-gray;
+			&:hover{
+				color: $icon-hover;
+			}
+		}
+	}
+}
+
+/* FEATURES */
+#features{
+	background-color: $bg-gray;
+	padding: 4em 0 4em;
+}
+	.feature{
+		display: flex;
+		margin-bottom: 1.5em;
+
+		.container-icon{
+			font-size: 2.4em;
+			color: $app-red;
+			flex: 0 0 25%;
+		}
+		.description-container{
+			font-size: .95em;
+			line-height: 1.5;
+		}
+		.title{
+			font-size: 1.1em;
+			margin-bottom: 1em;
+		}
+	}
+
+#features,
+#about{
+	.flex-box{
+		@include wrapper();
+	}
+}
+
+
+
+/************ MEDIA QUERIES **************/
+
+@media screen and (min-width: em(650)) {
+
+
+	#main-header{
+		.desktop-wrapper{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		nav{
+			box-shadow: none;
+			height: auto;
+			max-height: none;
+			overflow: auto;
+			transition:none;
+			a{
+				display: block;
+				padding: 1em;
+				&:hover{
+					color: $app-red;
+				}
+			}
+		}
+		.menu{
+			display: flex;
+		}
+
+		.sub-menu{
+			display: none;
+			position: absolute;
+			background-color: white;
+			box-shadow: 3px 3px 3px rgba(0,0,0,.1);
+			a{
+				padding-left: 1em;
+			}
+		}
+		/*.sub-menu-parent:hover .sub-menu, .sub-menu-parent:focus .sub-menu, .sub-menu-parent:active .sub-menu{
+			display: block;
+		}*/
+		.displayed-submenu{
+			background-color:aqua;
+			display: block;
+			height:15rem;
+		}
+
+
+
+	}
+	#menu-handler{
+		display: none;
+	}
+
+	#about, #features{
+		.flex-box{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		.flex-item{
+			width: 48%;
+		}
+	}
+}
+
+@media screen and (min-width: em(768)) {
+
+	.project{
+		display: flex;
+		min-height: rem(450);
+
+		&:nth-child(2n){
+			flex-direction: row-reverse;
+		}
+
+		figure, >div{
+			flex: 0 0 50%;
+		}
+		figure{
+			position: relative;
+			overflow: hidden;
+		}
+		img{
+			max-width: none;
+			max-height: none;
+			min-width: 100%;
+			min-height: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.description-container .wrapper{
+			width: 80%;
+		}
+	}
+}
+
+@media screen and (min-width: em(1100)) {
+	.desktop-wrapper{
+		@include wrapper(90%, rem(1600));
+	}
+
+	#about, #features{
+		.flex-box{
+			max-width: rem(1030);
+		}
+		.flex-item{
+			width: 31%;
+		}
+	}
+}
+
+@media screen and (min-width: em(1400)) {
+	section{
+		font-size: 1.1em;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

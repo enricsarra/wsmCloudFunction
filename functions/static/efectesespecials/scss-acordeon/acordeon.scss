@@ -1,0 +1,81 @@
+/* COLORS */
+
+$bg-gray		: #ececec;
+$text-light		: #868f90;
+$text-dark		: black;
+
+
+
+
+
+body{
+  color: $text-light;
+}
+
+/*Inicia el acordeón*/
+
+.falsa{
+  background-color: gray;
+  position: relative;
+  // como header del menu es fixed, el acordeon subiria hasta arriba del todo
+  height: 20rem;
+}
+
+
+#accordion {
+  background-color: aqua;
+  width: 100%;
+  min-height: 60vh;
+  padding: 0.5rem;
+}
+
+
+#accordion .item {
+  //background-color: green;
+  width: 100%;
+  height: 3rem; /* height = total height of A child element */
+  margin: 1rem auto;
+  overflow: hidden;
+
+  transition: height ease-in-out 500ms; /* css3 transition */
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  //margin-bottom: 2px;
+}
+
+#accordion a {
+  display: block;
+  height: 3rem;
+  line-height: 3rem;
+  background: $bg-gray	;
+  color: $text-light;
+  padding-left: 0.2rem;
+  text-decoration: none;
+}
+#accordion p {
+  //height: auto;
+  //padding: 1rem;
+}
+#accordion div:hover {
+  // height auto: no funciona la transicion
+  height: 20vh; /* height = total height of A and P elements */
+}
+#accordion div:hover a {
+  border-bottom: 1px solid #ccc;
+  color: $text-dark;
+  //font-weight: bold;
+}
+
+
+
+/** MEDIA QUERYS **/
+
+//@media screen and (min-width: px(50)) {    hay que ver porque no va bien
+ @media screen and (min-width: 50rem) {
+  #accordion .item {
+    width: 80%;
+  }
+
+}

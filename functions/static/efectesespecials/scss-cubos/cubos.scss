@@ -1,0 +1,123 @@
+html, body {
+  height: 100%;
+}
+
+
+// universo
+
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, -1000px);
+  }
+}
+.wraper {
+  background-color: #03033A;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  transform-style: preserve-3d;
+
+}
+.bubble-wrap {
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  perspective: 600px;
+}
+.bubble {
+  position: absolute;
+  background: black;
+  opacity: .7;
+  border-radius: 50%;
+  animation: move 20s infinite;
+
+}
+
+@for $i from 1 through 100 {
+  .bubble:nth-child(#{$i}){
+    $size: random(30)+px;
+    height: $size;
+    width: $size;
+    animation-delay: -$i * .2s;
+    transform: translate3d( (random(1000) * 1px),  (random(1000) * 1px), (random(2000) * 1px));
+    background: hsl( random(360) , 70%, 50%);
+  }
+
+}
+
+// cubos
+
+.cube {
+  // color i dimensiones didacticas
+  //background-color: aqua;
+  //width:800px;
+  //height: 205px;
+
+  position: relative;
+  left: 50%;
+  top: 300px;
+  transition: transform 1s linear;
+
+}
+
+.rightFace,
+.leftFace,
+.topFace div {
+  padding: 30px;
+  width: 200px;
+  height: 200px;
+  color: aqua;
+  text-align: center;
+}
+
+.rightFace,
+.leftFace,
+.topFace {
+  position: absolute;
+  & a{
+    line-height: 140px;
+    cursor: pointer;
+  }
+}
+
+.leftFace {
+  transform: skewY(30deg);
+  background-color: #ADADD8;
+}
+
+.rightFace {
+  transform: skewY(-30deg);
+  background-color: #8989D3;
+  left: 200px;
+}
+
+.topFace div {
+  transform: skewY(-30deg) scaleY(1.16);
+  background-color: #8686BE;
+  font-size: 0.862em;
+}
+
+.topFace {
+  transform: rotate(60deg);
+  top: -158px;
+  left: 100px;
+}
+
+.cube:hover{
+  transform: translate(202px, 115px);
+}
+
+.cube.two{
+  top: 416px;
+  left: 50%;
+  margin-left: -200px;
+}
+
+.cube.three{
+  top: 532px;
+  left: 50%;
+  margin-left: -400px;
+}

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="scss/styles.css">
+    <link rel="stylesheet" href="scss-efectos/efectos.css">
+
+    <title>Efectos-1: camuflaje</title>
+
+
+</head>
+
+<body ontouchstart>
+
+    <!-- HEADER -->
+    <header id="main-header">
+        <div class="desktop-wrapper">
+            <a href="#" class="logo">
+            CLEAN
+        </a>
+            <div id="menu-handler" class="icon-menu"></div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="sub-menu-parent"><a href="#">Animacions</a>
+                        <ul class="sub-menu">
+                            <li><a href="efectos.html">Efectes</a></li>
+                            <li><a href="cubos.html">Cubos</a></li>
+                            <li><a href="cards.html">Cartes</a></li>
+                            <li><a href="acordeon.html">Acordeón</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html">Retornar</a></li>
+                    <li><a id="inici" href="#">Inici</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- ANIMACIO -->
+
+    <section class="animacio">
+        <div class="fondo_animacio"></div>
+        <div class="fondo_animacio"></div>
+        <div class="fondo_animacio"></div>
+        <div class="fondo_animacio"></div>
+    </section>
+
+
+    <!-- EFECTES -->
+    <div class="row">
+        <div class="info-box">
+            <header>
+                <span class="icon fa fa-home"></span>
+                <span class="title"> 1º <span>Camuflaje-Color-Triángulo lateral</span></span>
+            </header>
+            <div class="text-container">
+                <p> Dibujamos un triangulo del mismo color que su contenedor. El triángulo se define con bordes</p>
+
+            </div>
+            <div class="text-container triangulo_lateral">
+                <p>Al pasar por encima, se visualizará una flecha. El elemento se camufla con el mismo color que el contenedor. Al ejecutar la orden, el elemento se desplaza fuera de su contenedor,produciendo el efecto
+                </p>
+
+
+            </div>
+        </div>
+        <div class="info-box">
+            <header>
+                <span class="icon fa fa-tasks"></span>
+                <span class="title"> 2º <span>Camuflaje-Color-Triángulo fijo</span></span>
+            </header>
+            <div class="text-container">
+                <p> Dibujamos un triangulo del mismo color que su contenedor. El triángulo se define con bordes</p>
+            </div>
+
+            <div class="text-container triangulo_fijo">
+                <p> Al pasar por encima, se moverá la caja. En lugar de ocultar y desplazar el triángulo, lo que haremos es bajar la caja (al bajar la caja, también baja el before) y subir el triángulo (porque ha bajado con la caja).
+                </p>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <header>
+                <span class="icon fa fa-tasks"></span>
+                <span class="title"> 3º <span>Camuflaje-Tamaño-Esquina de página</span></span>
+            </header>
+            <div class="text-container">
+                <p> Dibujamos un cuadrado de 0 dimensiones en la esquina inferior izquierda. </p>
+
+            </div>
+
+            <div class="text-container esquina_pagina">
+                <p> Al pasar por encima, definimos el cuadrado de la esquina con dimensiones. Con el color del background hacemos el efecto. El cuadrado ha estado siempre, pero con dimensiones a cero. Por esto decimos que es camuflaje por tamaño. </p>
+
+            </div>
+        </div>
+
+        <div class="info-box">
+            <header>
+                <span class="icon fa fa-tasks"></span>
+                <span class="title"> 4º <span>Camuflaje-Transparencia-Sombra fija</span></span>
+            </header>
+            <div class="text-container">
+                <p> Dibujamos una sombra transparente.</p>
+
+            </div>
+
+            <div class="text-container sombra_fija">
+                <p> Al pasar por encima, se moverá la caja. lo que haremos es subir la caja (al subir la caja, también sube el before) y bajar la sombra (porque ha subido con la caja)</p>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <header>
+                <span class="icon fa fa-tasks"></span>
+                <span class="title"> 5º <span>Camuflaje-Sombras-Sombra difuminada</span></span>
+            </header>
+            <div class="text-container">
+                <p> A la caja le aplicamos una sombra de dimensión cero</p>
+
+            </div>
+
+            <div class="text-container sombra_difuminada">
+                <p> Al pasar por encima, la sombra aumenta de tamaño produciendo el efecto deseado.</p>
+            </div>
+        </div>
+        <div class="info-box">
+            <header>
+                <span class="icon fa fa-tasks"></span>
+                <span class="title"> 6º <span>Camuflaje-Sombras-Sombra radial</span></span>
+            </header>
+            <div class="text-container">
+                <p> Dibujamos una sombra eliptica arriba y otra abajo transparentes.</p>
+
+            </div>
+
+            <div class="text-container sombra_radial">
+                <p> Al pasar por encima, se visualizarán las sombras porque ya no son transparentes.</p>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <header>
+                <span class="icon fa fa-tasks"></span>
+                <span class="title"> 7º <span>Camuflaje-Sombras-Sombra externa</span></span>
+            </header>
+            <div class="text-container">
+                <p> Dibujamos una sombra con valores bajos.</p>
+
+            </div>
+
+            <div class="text-container sombra_externa">
+                <p> Al pasar por encima, se visualizará la sombra porque con un tamaño mayor. Esta sombra me parece bastante buena y sencilla.</p>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <header>
+                <span class="icon fa fa-tasks"></span>
+                <span class="title"> 8º <span>Camuflaje-Sombras-Sombra interna</span></span>
+            </header>
+            <div class="text-container">
+                <p> Dibujamos dos sombras combinadas</p>
+
+            </div>
+
+            <div class="text-container sombra_interna">
+                <p> Al pasar por encima, se visualizarán las dos sombras combinadas.</p>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <header>
+                <span class="icon fa fa-tasks"></span>
+                <span class="title"> 9º <span>Camuflaje-iluminacion</span></span>
+            </header>
+            <div class="text-container">
+                <p> Iluminamos la caja </p>
+
+            </div>
+
+            <div class="text-container iluminacion">
+                <p> Al pasar por encima, la caja se ilumina. Se aplica un fondo blanco. Podemos definir un borde para darle más efecto. Va bien con cajas con contenido destaque sobre el blanco.</p>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <header>
+                <span class="icon fa fa-tasks"></span>
+                <span class="title"> 10º <span>Camuflaje-Resalte de borde</span></span>
+            </header>
+            <div class="text-container">
+                <p> Creamos </p>
+
+            </div>
+
+            <div class="text-container resalte_borde">
+                <p> Creamos una sombra de la caja para simular un borde. Si el fondo es claro debemos utilizar un tono claro y si el fondo es oscuro un tono oscuro. Al pasar por encima cambiamos el borde a un tono mas oscuro para que resalte del fondo.</p>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <header>
+                <span class="icon fa fa-tasks"></span>
+                <span class="title"> 11º <span>Camuflaje-resalte de borde</span></span>
+            </header>
+            <div class="text-container">
+                <p> Creamos una sombra de la caja</p>
+
+            </div>
+
+            <div class="text-container resalte_borde">
+                <p> Creamos una sombra de la caja para simular un borde. Si el fondo es claro debemos utilizar un tono claro y si el fondo es oscuro un tono oscuro. Al pasar por encima cambiamos el borde a un tono mas oscuro para que resalte del fondo.</p>
+            </div>
+        </div>
+        <div class="info-box">
+            <header>
+                <span class="icon fa fa-home"></span>
+                <span class="title"> 12º <span>Camuflaje-borde interno </span></span>
+            </header>
+            <div class="text-container">
+                <p> Dibujamos un borde con opacidad </p>
+
+            </div>
+            <div class="text-container borde_interno">
+                <p>Al pasar por encima se visualiza el borde</p>
+
+
+            </div>
+        </div>
+
+        <div class="info-box">
+            <header>
+                <span class="icon fa fa-home"></span>
+                <span class="title"> 13º <span>Camuflaje-Expansion de borde </span></span>
+            </header>
+            <div class="text-container">
+                <p> Dibujamos un borde </p>
+
+            </div>
+            <div class="text-container    expansion_de_borde">
+                <p>Al pasar por encima se expandirá el borde hacia fuera</p>
+
+
+            </div>
+        </div>
+
+        <div class="info-box">
+            <header>
+                <span class="icon fa fa-home"></span>
+                <span class="title"> 14º <span>Camuflaje-Recogida de borde </span></span>
+            </header>
+            <div class="text-container">
+                <p> Dibujamos un borde extendido sin visibilidad</p>
+
+            </div>
+            <div class="text-container    recogida_de_borde">
+                <p>Al pasar por encima se visualiza el borde más recogido. </p>
+
+
+            </div>
+        </div>
+
+        <div class="info-box">
+            <header>
+                <span class="icon fa fa-home"></span>
+                <span class="title"> 15º <span>Camuflaje-Redondeo de esquinas </span></span>
+            </header>
+            <div class="text-container">
+                <p> Redondeamos las esquinas</p>
+
+            </div>
+            <div class="text-container    redondeo_esquinas">
+                <p>Al pasar por encima se redondean las esquinas. Efecto muy utilizado y al parecer elegante. </p>
+
+
+            </div>
+        </div>
+
+        <div class="info-box">
+            <header>
+                <span class="icon fa fa-home"></span>
+                <span class="title"> 16º <span>Camuflaje-Redondeo de esquinas </span></span>
+            </header>
+            <div class="text-container">
+                <p> Menús</p>
+
+            </div>
+            <div class="text-container menus">
+                <p>Al seleccionar una opción se visualiza el efecto</p>
+                <p>Habría que hacerlo en "focus", pero en el ejemplo se utiliza el "hover".</p>
+                <span>Opción-1 </span>
+                <span>Opción-2 </span>
+                <span>Opción-3 </span>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

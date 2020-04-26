@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="http://localhost:5001/wsmcloudfunction/us-central1/wsmCloudFunction/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+    <!--  Font Awesome 4.6.3 CDN  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/pagina1/css/styles.css">
+    <title>Web Components: lit-elements</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header id="main-header">
+        <div class="desktop-wrapper">
+            <a href="#" class="logo letter-3d">Henry WSM</a>
+
+            <div id="menu-handler" class="icon-menu"></div>
+            <nav>
+                <ul class="menu">
+                    <li><a id="inici" href="#">Inici</a></li>
+                    <li><a href="static/index/index.html">Retornar</a></li>
+                    <li class="sub-menu-parent"><a href="#"><strike>Portfolio</strike></a>
+                        <!--   No funciona al ipad, no funciona al iphone apaixat -->
+                        <!-- <ul class="sub-menu">
+                            <li><a href="#">Project First</a></li>
+                            <li><a href="#">Project Second</a></li>
+                            <li><a href="#">Project Third</a></li>
+                            <li><a href="#">Project Fourth</a></li>
+                        </ul> -->
+                    </li>
+                    <li><a href="#"><strike>About</strike></a></li>
+                    <li><a href="#"><strike>Features</strike></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- COVER -->
+    <!-- <section id="cover">
+        <h1 class="claim title">Make something you love</h1>
+        <div class="text">100% free HTML5 Template by <a class="red-link" href="#">FREEHTML%.co</a></div>
+    </section> -->
+
+    <section id="cover2" class="Iam">
+        <!-- <p>This is</p> -->
+        <b>
+              <div class="innerIam">
+                Web Components<br /> 
+                Lit-Element<br />
+                templates, binding<br />
+                slots, events<br />
+                propietats. 🤓
+                </div>
+            </b>
+
+
+
+    </section>
+
+
+
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+        <div class="desktop-wrapper">
+            <article class="project">
+                <figure><img src="static/pagina1/img/work_1.png" alt=""></figure>
+                <div class="description-container">
+                    <div class="wrapper">
+
+                        <div class="title"> Menú-overlay</div>
+                        <div class="description">
+                            <div class="container-menus-overlay">
+                                <wsm-menu-overlay>
+                                    <p>Web-component "wsm-menu-overlay".</p>
+                                    <p>Es un web component fet amb Litelement. Es un component sencill. El codi es troba 'static/wsm-component/main.js'.
+                                    </p>
+                                    <article slot="trigger"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></article>
+                                </wsm-menu-overlay>
+
+                                <wsm-menu-overlay>
+                                    <p>Web-component "wsm-menu-overlay".</p>
+                                    <p>Es el mateix component configurat amb un 'icon' i texte diferents. Aquesta es la ventatja per utilitzar components.
+                                    </p>
+                                    <span slot="trigger"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path opacity=".3" d="M15 11V4H4v8.17l.59-.58.58-.59H6z"/><path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-5 7c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10zM4.59 11.59l-.59.58V4h11v7H5.17l-.58.59z"/></svg></span>
+                                </wsm-menu-overlay>
+
+                            </div>
+                            <p> LitElement és la nova base classe per a la creació d'elements personalitzats, el que coneixem generalment per Web Components o simplement components, creada per l'equip de Polymer. Mitjançant aquesta classe podem construir
+                                components d'una manera ràpida i senzilla, creant nous elements de l'HTML especialitzats per a implementar qualsevol tipus d'interfície o comportament, en l'àmbit del navegador.</p>
+
+                            <p> Està basada en Javascript estàndard (Web Components), pel que és molt lleugera i funciona recolzant-se en característiques natives dels navegadors, de manera que també ofereix elevadíssim rendiment. </p>
+
+
+                            <div class="btn">Read the casetudy</div>
+                        </div>
+                    </div>
+            </article>
+            <article class="project">
+                <figure><img src="static/pagina1/img/work_2.png" alt=""></figure>
+                <div class="description-container">
+                    <div class="wrapper">
+                        <div class="title">Menú-overlay millorat </div>
+                        <div class="description">
+                            <p>Propera modificació "menú overlay". Es crearà el component 'wsm-icon' i es modificarà el component 'wsm-menu-overlay' per incloure 'wsm-icon'. D'aquesta manera, en el HTML, especificarem al 'wsm-menu-overlay amb' l'atribut
+                                'nom-icon'='nom del icon'</p>
+                            <p>Al component 'wsm-icon' tindrem tots els icons disponibles per tota la app. D'aquesta manera el now wsm-menu-overlay gestionará el css y html del icon. Es un exemple de com un component pot importar una altre component i així
+                                reutilitzar els components per construir estructures mes complexes.
+                            </p>
+                        </div>
+                        <div class="btn">Read the casetudy</div>
+                    </div>
+                </div>
+            </article>
+            </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2 class="section-title">Poetes</h2>
+        <div class="flex-box">
+            <article class="flex-item">
+                <figure><img src="static/pagina1/img/miquel-marti-pol.jpg" alt=""></figure>
+                <h3 class="name">Miquel Martí i Pol</h3>
+                <div class="description">
+                    <code>
+                    De res no ens val l'enyor o la complanta, 
+                    ni el toc de displicent malenconia 
+                    que ens posem per jersei o per corbata 
+                    quan sortim al carrer. Tenim a penes
+                    el que tenim i prou: l'espai d'història concreta que ens pertoca, i un minúscul territori per viure-la.
+                    Posem-nos dempeus altra vegada i que se senti la veu de tots solemnement i clara. Cridem qui som i que tothom ho escolti.
+                </code>
+
+                </div>
+                <div class="social">
+                    <a href="#" class="icon-twitter"></a>
+                    <a href="#" class="icon-github"></a>
+                </div>
+            </article>
+            <article class="flex-item">
+                <figure><img src="static/pagina1/img/j-v-fox.jpg" alt=""></figure>
+                <h3 class="name">J.V. Foix</h3>
+                <div class="description">
+                    <code>
+                    És quan dormo que hi veig clar 
+                    Foll d'una dolça metzina,
+                     Amb perles a cada mà 
+                     Visc al cor d'una petxina, 
+                     Só la font del comellar
+                     I el jaç de la salvatgina,
+                     O la lluna que s'afina
+                     En morir carena enllà. 
+                     És quan dormo que hi veig clar 
+                     Foll d'una dolça metzina.
+                </code>
+                </div>
+                <div class="social">
+                    <a href="#" class="icon-twitter"></a>
+                    <a href="#" class="icon-github"></a>
+                </div>
+            </article>
+            <article class="flex-item">
+                <figure><img src="static/pagina1/img/salvador-espriu.jpg" alt=""></figure>
+                <h3 class="name">Salvador Espriu</h3>
+                <div class="description">
+                    <code>
+                    Oh!, que cansat estic de la meva covarda, vella, tan salvatge terra, i com m'agradaria d'allunyar-me'n, nord enllà, on diuen que la gent és neta, i noble, culta, rica, lliure, desvetllada i feliç. [...] Però no he de seguir mai el meu
+                    somni, i em quedaré aquí fins a la mort, car sóc també molt covard i salvatge, i estimo a més amb un desesperat dolor aquesta meva pobra, bruta, trista, dissortada pàtria.
+                </code>
+                </div>
+                <div class="social">
+                    <a href="#" class="icon-twitter"></a>
+                    <a href="#" class="icon-github"></a>
+                </div>
+            </article>
+            <article class="flex-item">
+                <figure><img src="static/pagina1/img/maria-marcal.jpg" alt=""></figure>
+                <h3 class="name">Maria-Mercè Marçal</h3>
+                <div class="description">
+                    <code>A l'atzar agraeixo tres dons: 
+                    haver nascut dona,
+                    de classe baixa i nació oprimida. 
+                    I el tèrbol atzur de ser tres voltes rebel.
+                    </code>
+                </div>
+                <div class="social">
+                    <a href="#" class="icon-twitter"></a>
+                    <a href="#" class="icon-github"></a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+    <!-- FEATURES -->
+    <section id="features">
+        <h2 class="section-title">Features</h2>
+        <div class="flex-box">
+            <div class="feature flex-item">
+                <div class="container-icon"><span class="icon-gift"></span></div>
+                <div class="description-container">
+                    <div class="title">100% Free</div>
+                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At assumenda odit, laboriosam rem officia suscipit. Reiciendis natus, itaque minus aspernatur eos deserunt eligendi dolor dolores consequuntur vel hic magnam aliquam.</div>
+                </div>
+            </div>
+            <div class="feature flex-item">
+                <div class="container-icon"><span class="icon-eye"></span></div>
+                <div class="description-container">
+                    <div class="title">Retina Ready</div>
+                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit aliquid dolorum molestias, sapiente expedita iure libero mollitia, optio doloremque! Cum, eligendi quasi corporis esse inventore exercitationem quaerat quisquam
+                        porro architecto.</div>
+                </div>
+            </div>
+            <div class="feature flex-item">
+                <div class="container-icon"><span class="icon-crop"></span></div>
+                <div class="description-container">
+                    <div class="title">Fully Responsive</div>
+                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id voluptate enim ut quod, soluta nemo accusamus facilis sit dignissimos dolorum repellat at. Recusandae laborum, voluptatum dicta facilis nobis, officia id.</div>
+                </div>
+            </div>
+            <div class="feature flex-item">
+                <div class="container-icon"><span class="icon-crop"></span></div>
+                <div class="description-container">
+                    <div class="title">Fully Responsive</div>
+                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id voluptate enim ut quod, soluta nemo accusamus facilis sit dignissimos dolorum repellat at. Recusandae laborum, voluptatum dicta facilis nobis, officia id.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="main-footer">
+        <p class="copy">© Clean Free HTML5. All Rights Reserved. </p>
+        <p class="author">Created by <a class="red-link" target="_blank" href="http://freehtml5.co/">FREEHTML5.co</a> Images: <a class="red-link" target="_blank" href="http://pexels.com/">Pexels</a></p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="static/pagina1/js/index.js"></script>
+    <script src="static/wsm-component/main.js"></script>
+</body>
+
+</html>

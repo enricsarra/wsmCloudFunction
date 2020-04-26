@@ -1,0 +1,50 @@
+/************ VARIABLES **************/
+
+/* COLORS */
+
+$app-red		: #E32929;
+
+$bg-gray		: #ececec;
+
+$text-light		: #868f90;
+$text-dark		: black;
+
+$icon-gray		: #ccc;
+$icon-hover		: $text-dark;
+
+$menu-item-hover: $app-red;
+
+/* FONTS */
+
+$serif: "Roboto Slab", serif;
+$sans-serif: "Roboto", sans-serif;
+
+
+/* SIZES */
+
+$header-height: 5rem;
+$btn-height: 3.5em;
+
+/************ MIXINS **************/
+
+@mixin wrapper($width:90%, $max-width:none){
+	width: $width;
+	max-width: $max-width;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/************ FUNCTIONS **************/
+
+//PX TO REM
+@function rem($size, $base:16) {
+  $remSize: $size / $base;
+  @return #{$remSize}rem;
+}
+
+//PX TO EM
+@function em($size, $base:16) {
+  $emSize: $size / $base;
+  @return #{$emSize}em;
+}

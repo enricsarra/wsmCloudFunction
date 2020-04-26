@@ -1,0 +1,167 @@
+/*'#429997', '#dd926c', '#816c96', '#898442' */
+
+body {
+    font-family: "Montserrat";
+    line-height: 1.5;
+    color: white;
+}
+
+h3 {
+    /* font: bold 4em Helvetica, Verdana, sans-serif; */
+    font: 4em Helvetica, Verdana, sans-serif;
+    text-shadow: 0 2px 0 #b4c1cd, 0 4px 0 #a0b1bf, 0 6px 0 #8ca0b2, 0 8px 0 #778fa4, 3px 8px 15px rgba(0, 0, 0, 0.1), 3px 8px 5px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    /* font: bold 1.9em Helvetica, Verdana, sans-serif; */
+    font: bold 1.9em Helvetica, Verdana, sans-serif;
+    text-shadow: 0 2px 0 #b4c1cd, 0 3px 0 #a0b1bf, 0 4px 0 #8ca0b2, 0 5px 0 #778fa4, 0px 9px 10px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.3);
+    /* font-size: 1.6em; */
+}
+
+h3,
+p {
+    /* font: bold 100px/1 Helvetica, Verdana, sans-serif; */
+    font-family: 'Sansita One', cursive;
+    text-transform: none;
+    /*font-weight: 400;*/
+    margin-bottom: .4em;
+    /* text-transform: uppercase; */
+    color: #c8d2da;
+}
+
+section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
+
+.character-half {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+}
+
+.character-picture {
+    left: 0;
+    background-image: url(http://portfolio.hoyheaprendido.es/guijuelo/img/pattern-light.jpg);
+}
+
+.picture-container,
+.description-container {
+    opacity: 0;
+    -webkit-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+.picture-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    -webkit-transform: translateY(100vh);
+    transform: translateY(100vh);
+}
+
+.picture-container.displayed {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.picture-container.picture-1 {
+    background-image: url(http://portfolio.hoyheaprendido.es/guijuelo/img/character-1.svg);
+}
+
+.picture-container.picture-2 {
+    background-image: url(http://portfolio.hoyheaprendido.es/guijuelo/img/character-2.svg);
+}
+
+.picture-container.picture-3 {
+    background-image: url(http://portfolio.hoyheaprendido.es/guijuelo/img/character-3.svg);
+}
+
+.picture-container.picture-4 {
+    background-image: url(http://portfolio.hoyheaprendido.es/guijuelo/img/character-4.svg);
+}
+
+.character-description {
+    left: 50%;
+    background-color: #429997;
+    -webkit-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+.description-container {
+    width: 80%;
+    margin-left: 10%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(50vw, -50%);
+    transform: translate(50vw, -50%);
+}
+
+.description-container.displayed {
+    opacity: 1;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+header {
+    position: relative;
+    z-index: 1;
+}
+
+header nav {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+
+.nav-control {
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+    border: 2px solid white;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 2.3rem;
+    display: inline-block;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.nav-control:hover {
+    background-color: white;
+    color: red;
+}
+
+@media only screen and (max-width: 768px) {
+    header nav {
+        /*border: 2px solid white;*/
+        left: 1em;
+    }
+    .nav-control {
+        border: 2px solid rgb(254, 255, 255);
+        /*background-color: rgb(28, 156, 156);*/
+    }
+    .nav-control:hover {
+        background-color: rgb(251, 252, 252);
+        color: red;
+    }
+    h3 {
+        font-family: 'Nunito';
+        font-size: 1.3em;
+    }
+    p {
+        font-size: 1.5em;
+    }
+}

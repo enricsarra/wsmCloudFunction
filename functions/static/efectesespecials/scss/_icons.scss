@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('../fonts/icomoon.eot?s7ylu7');
+    src:    url('../fonts/icomoon.eot?s7ylu7#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?s7ylu7') format('truetype'),
+        url('../fonts/icomoon.woff?s7ylu7') format('woff'),
+        url('../fonts/icomoon.svg?s7ylu7#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+[class^="icon-"],[class*=" icon-"]{
+    line-height: 1;
+    display: inline-block;
+}
+[class^="icon-"]::before, [class*=" icon-"]::before {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+html:not([data-useragent*='Android']){
+    [class^="icon-"]::before, [class*=" icon-"]::before{
+        text-rendering: optimizeLegibility;
+    }
+}
+
+.icon-heart::before {
+    content: "\e905";
+}
+.icon-umbrella::before {
+    content: "\e906";
+}
+.icon-eye::before {
+    content: "\e900";
+}
+.icon-crop::before {
+    content: "\e902";
+}
+.icon-gift::before {
+    content: "\e903";
+}
+.icon-github::before {
+    content: "\e904";
+}
+
+/* NOT CHANGE THE ORDER OF THESE CLASSES */
+.icon-menu::before {
+    content: "\e901";
+}
+.icon-close::before {
+    content: "\e5cd";
+}
+/**************/
+
+
+.icon-meter::before {
+    content: "\e9a6";
+}
+.icon-twitter::before {
+    content: "\ea96";
+}
